@@ -44,12 +44,12 @@ int main() {
 
    string withspaces;
    
-   cin >> withspaces;
+   getline(cin, withspaces);
    
    string nospaces = removeSpaces(withspaces);
    
    if(isPalindrome(nospaces)) {
-      cout << "Palindrome: " << withspaces << endl;
+      cout << "palindrome: " << withspaces << endl;
    } else {
       cout << "not a palindrome: " << withspaces << endl;
    }
