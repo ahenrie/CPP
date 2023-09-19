@@ -44,11 +44,12 @@ void outputroster(const vector<int>& jerseys, const vector<int>& ratings) {
 void addplayer(vector<int>& jerseys, vector<int>& ratings) {
    cout << "Enter a new player's jersey number:" << endl;
    int newj = getjersey();
-   cout << "Enter a new rating for player:" << endl;
+   cout << "Enter the player's rating:" << endl;
    int newr = getrating();
    
    jerseys.push_back(newj);
    ratings.push_back(newr);
+   cout << endl;
    }
    
 void deleteplayer(vector<int>& jerseys, vector<int>& ratings) {
@@ -57,20 +58,20 @@ void deleteplayer(vector<int>& jerseys, vector<int>& ratings) {
    
    for (int i = 0; i < jerseys.size(); i++) {
       if (jerseys[i] == jnumber) {
-         jerseys.erase(jerseys.begin() + 1);
-         ratings.erase(ratings.begin() + 1);
+         jerseys.erase(jerseys.begin() + i);
+         ratings.erase(ratings.begin() + i);
          return;
          }
       }
    }
 
-void updatepleyer(vector<int>& jerseys, vector<int>& ratings) {
+void updateplayer(vector<int>& jerseys, vector<int>& ratings) {
    cout << "Enter a jersey number:" << endl;
    int jnumber = getjersey();
    
    for (int i = 0; i < jerseys.size(); i++) {
       if (jerseys[i] == jnumber) {
-         cout << "Enter a new rating for player:" << endl;
+         cout << "Enter the player's rating:" << endl;
          int rating = getrating();
          ratings[i] = rating;
          return;
@@ -125,6 +126,8 @@ int main() {
          case 'o':
             outputroster(jerseys, ratings);
             break;
+         case 'u':
+            updateplayer(jerseys, ratings);
          case 'q':
             break;
          }
