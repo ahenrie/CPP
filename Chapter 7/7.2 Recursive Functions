@@ -1,0 +1,31 @@
+# Recursive Functions
+
+Functions may call other functions. A function that calls itself is a recursive function.
+
+## Example of Recursion
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void CountDown(int countInt) {
+   if (countInt <= 0) {
+      cout << "Go!\n";
+   }
+   else {
+      cout << countInt << endl;
+      CountDown(countInt - 1);
+   }
+}
+
+int main() {
+   CountDown(2);
+   return 0;
+}
+```
+
+Each call to CountDown() effectively creates a new "copy" of the executing function, as shown on the right. Returning deletes that copy.
+
+The example is for demonstrating recursion; counting down is otherwise better implemented with a loop.
+
+Recursion may be direct, such as f() itself calling f(), or indirect, such as f() calling g() and g() calling f().
