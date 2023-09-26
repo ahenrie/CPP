@@ -16,8 +16,6 @@
   - Parameters: Local variables that store the information from the argument
   - Function Body: The statement(s) that are executed when the function is called.
 
-**Pass by Reference**: a parameter passing technique in computer programming where a reference to the original data, rather than a copy of the data, is passed to a function or method. This means that any modifications made to the parameter within the function directly affect the original data outside of the function. Pass by reference is often used to efficiently work with large data structures or to allow a function to modify the values of its arguments.
-
 ```c++
 #include <iostream>
 
@@ -34,6 +32,31 @@ int main() {
     
     // Printing the original value
     std::cout << "Original Value: " << originalValue << std::endl;
+    
+    return 0;
+}
+```
+
+**Pass by Reference**: a parameter passing technique in computer programming where a reference to the original data, rather than a copy of the data, is passed to a function or method.
+  - This means that any modifications made to the parameter within the function directly affect the original data outside of the function. 
+  - Pass by reference is often used to efficiently work with large data structures or to allow a function to modify the values of its arguments.
+
+```cpp
+#include <iostream>
+
+// Function that takes an integer parameter by reference
+void modifyValueByReference(int &x) {
+    x = x + 1; // Changes made to 'x' directly affect the original value
+}
+
+int main() {
+    int originalValue = 5;
+    
+    // Calling the function with 'originalValue' as a reference
+    modifyValueByReference(originalValue);
+    
+    // Printing the modified value
+    std::cout << "Modified Value: " << originalValue << std::endl;
     
     return 0;
 }
