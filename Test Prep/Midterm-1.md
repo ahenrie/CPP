@@ -1,22 +1,25 @@
 # Midterm Prep
 
-How do we store integers with binary - base 2 binary.
-How do we store signed integers with binary - 2's compliment.
-What is overflow - 
-What is underflow - 
-What about fractional values? - We use a variant of scientific notation using a power of two instead of a power of 10 (mantisa exponent) that gives us the ability to spread out the 4 billion number of values.
-What has to happen when we want to store an infinite number of values using a finite number of memory? We round.
-Whenever we are using floating point values, we need to be careful doing comparisions. 
-Look at the difference of two floating point numbers and use absolute value to compare to some delta  abs(a-b) < Delta
-Brush up on scientific notation
-Arithmetic operators
-Char is an 8-bit int
-Logical operators: <, > <=, >=, !=, and, or, not
-Bitwise operators: do the same but act on each bit at a time
-Bitshifting: a << 2 (shiflt left by 2 bits which is a multiplication of powers of 2, in this case 4 since 2 to the power of 2 is 4.), >> 4 (shift right by 4)
+- How do we store integers with binary - base 2 binary.
+- How do we store signed integers with binary - 2's compliment.
+- What is overflow - 
+- What is underflow - 
+
+- What about fractional values? - We use a variant of scientific notation using a power of two instead of a power of 10 (mantisa exponent) that gives us the     ability to spread out the 4 billion number of values.
+- What has to happen when we want to store an infinite number of values using a finite number of memory? We round.
+- Whenever we are using floating point values, we need to be careful doing comparisions. 
+- Look at the difference of two floating point numbers and use absolute value to compare to some delta  abs(a-b) < Delta
+- Brush up on scientific notation:
+  `double avogadrosNumber = 6.02e23;`
+    
+- Arithmetic operators --> + - * / and all that. 
+- Char is an 8-bit int
+- Logical operators: <, > <=, >=, !=, and, or, not
+- Bitwise operators: do the same but act on each bit at a time
+- Bitshifting: a << 2 (shiflt left by 2 bits which is a multiplication of powers of 2, in this case 4 since 2 to the power of 2 is 4.), >> 4 (shift right by 4)
   - Bitshifting can cause the value to be undefined. If we shift too many bits past the size of the value.
   - Two ways to shift to the right, logical and arithmetic. (get to know both)
-
+```cpp
 Switch statements:
 switch( integer value) {
   case a:
@@ -30,6 +33,7 @@ switch( integer value) {
     break;
   default:
 }
+```
 
 Ternary Operator--> (expression)?a:b
   If expression returns true, a is returned, if false, b is returned.
