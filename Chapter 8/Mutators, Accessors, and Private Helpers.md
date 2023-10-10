@@ -1,6 +1,6 @@
 # Mutators, Accessors, and Private Helpers
 
-# Mutators and Accessors
+## Mutators and Accessors
 
 Public functions of a class are commonly classified as mutators or accessors.
 1. **Mutator**: A fuction may modify or mutate a class' data members.
