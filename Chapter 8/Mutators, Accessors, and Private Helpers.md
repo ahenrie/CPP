@@ -7,7 +7,7 @@ Public functions of a class are commonly classified as mutators or accessors.
 2. **Accessor**: A function accesses data members but does not modify data members.
 
 ### Example
-```
+```cpp
 #include <iostream>
 #include <string>
 using namespace std;
